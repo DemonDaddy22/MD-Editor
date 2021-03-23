@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/md-editor/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/md-editor/static/js/main.edb0d009.chunk.js",
-    "main.js.map": "/md-editor/static/js/main.edb0d009.chunk.js.map",
-    "runtime-main.js": "/md-editor/static/js/runtime-main.0fbc92a5.js",
-    "runtime-main.js.map": "/md-editor/static/js/runtime-main.0fbc92a5.js.map",
-    "static/js/2.e478355e.chunk.js": "/md-editor/static/js/2.e478355e.chunk.js",
-    "static/js/2.e478355e.chunk.js.map": "/md-editor/static/js/2.e478355e.chunk.js.map",
-    "index.html": "/md-editor/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/md-editor/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.e478355e.chunk.js.LICENSE.txt": "/md-editor/static/js/2.e478355e.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/md-editor/static/media/logo.6ce24c58.svg"
+    "main.css": "/MD-Editor/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/MD-Editor/static/js/main.edb0d009.chunk.js",
+    "main.js.map": "/MD-Editor/static/js/main.edb0d009.chunk.js.map",
+    "runtime-main.js": "/MD-Editor/static/js/runtime-main.f4f0ee14.js",
+    "runtime-main.js.map": "/MD-Editor/static/js/runtime-main.f4f0ee14.js.map",
+    "static/js/2.e478355e.chunk.js": "/MD-Editor/static/js/2.e478355e.chunk.js",
+    "static/js/2.e478355e.chunk.js.map": "/MD-Editor/static/js/2.e478355e.chunk.js.map",
+    "index.html": "/MD-Editor/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/MD-Editor/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.e478355e.chunk.js.LICENSE.txt": "/MD-Editor/static/js/2.e478355e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/MD-Editor/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0fbc92a5.js",
+    "static/js/runtime-main.f4f0ee14.js",
     "static/js/2.e478355e.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.edb0d009.chunk.js"
