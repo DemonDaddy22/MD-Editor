@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { InputContext } from '../context/InputContext';
 
 const EditorContainer = styled.textarea`
     background-color: transparent;
@@ -29,8 +30,13 @@ const EditorContainer = styled.textarea`
     }
 `;
 
-const Editor = React.memo(() => <EditorContainer placeholder='Start typing...'>
+const Editor = React.memo(() => {
 
-</EditorContainer>);
+    const { setMarkdownText } = useContext(InputContext);
+
+    const handleInputChange = e => setMarkdownText(e.target.value);
+
+    return <EditorContainer onChange={handleInputChange} placeholder='Start typing...'></EditorContainer>;
+});
 
 export default Editor;

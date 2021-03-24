@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
+import { InputContext } from '../context/InputContext';
 
 const OutputContainer = styled.div`
     background-color: transparent;
@@ -12,12 +14,33 @@ const OutputContainer = styled.div`
     min-width: 450px;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0.75rem;
+    padding: 0 0.75rem;
     word-wrap: normal;
     white-space: pre-wrap;
 
+    hr {
+        border-color: #E9AB51;
+    }
+
+    a {
+        color: #FFF;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    pre {
+        background-color: #2e4d5e;
+        border-radius: 4px;
+        color: #0BF77D;
+        line-height: 1.5rem;
+        padding: 0.5rem;
+    }
+
     @media (min-width: 768px) {
-        padding: 1rem;
+        padding: 0 1rem;
     }
 
     @media (min-width: 1024px) {
@@ -25,8 +48,15 @@ const OutputContainer = styled.div`
     }
 `;
 
-const Output = React.memo(() => <OutputContainer>
-    # Hello
-</OutputContainer>);
+const Output = React.memo(() => {
+
+    const { markdownText } = useContext(InputContext);
+
+    return <OutputContainer>
+        <ReactMarkdown allowDangerousHtml>
+            {markdownText}
+        </ReactMarkdown>
+    </OutputContainer>;
+});
 
 export default Output;
