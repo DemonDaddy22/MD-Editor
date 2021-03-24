@@ -2,6 +2,9 @@ import React, { useContext } from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { InputContext } from '../context/InputContext';
+import gfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const OutputContainer = styled.div`
     background-color: transparent;
@@ -14,7 +17,7 @@ const OutputContainer = styled.div`
     min-width: 450px;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 0 0.75rem;
+    padding: 0.25rem 0.75rem;
     word-wrap: normal;
     white-space: pre-wrap;
 
@@ -31,16 +34,22 @@ const OutputContainer = styled.div`
         }
     }
 
-    pre {
-        background-color: #2e4d5e;
-        border-radius: 4px;
-        color: #0BF77D;
-        line-height: 1.5rem;
-        padding: 0.5rem;
+    table {
+        border: 1px solid #E9AB51;
+        border-collapse: collapse;
     }
 
+    td, th {
+        border: 1px solid #E9AB51;
+        padding: 0.5rem 1rem;
+    }
+
+    td {
+        color: #FFF;
+    }
+    
     @media (min-width: 768px) {
-        padding: 0 1rem;
+        padding: 0.5rem 1rem;
     }
 
     @media (min-width: 1024px) {
@@ -48,14 +57,19 @@ const OutputContainer = styled.div`
     }
 `;
 
+const renderers = {
+    code: ({ language, value }) => {
+        return <SyntaxHighlighter style={dark} language={language} children={value} showLineNumbers wrapLongLines
+            customStyle={{ backgroundColor: '#2e4d5e', textShadow: 'none', border: 'none' }} codeTagProps={{ style: { textShadow: 'none' } }} />;
+    }
+};
+
 const Output = React.memo(() => {
 
     const { markdownText } = useContext(InputContext);
 
     return <OutputContainer>
-        <ReactMarkdown allowDangerousHtml>
-            {markdownText}
-        </ReactMarkdown>
+        <ReactMarkdown plugins={[gfm]} renderers={renderers} children={markdownText} />
     </OutputContainer>;
 });
 
