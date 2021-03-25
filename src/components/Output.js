@@ -5,6 +5,7 @@ import { InputContext } from '../context/InputContext';
 import gfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import inlineLinks from 'remark-inline-links';
 
 const OutputContainer = styled.div`
     background-color: transparent;
@@ -47,6 +48,11 @@ const OutputContainer = styled.div`
     td {
         color: #FFF;
     }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
     
     @media (min-width: 768px) {
         padding: 0.5rem 1rem;
@@ -69,7 +75,7 @@ const Output = React.memo(() => {
     const { markdownText } = useContext(InputContext);
 
     return <OutputContainer>
-        <ReactMarkdown plugins={[gfm]} renderers={renderers} children={markdownText} />
+        <ReactMarkdown plugins={[gfm, inlineLinks]} renderers={renderers} children={markdownText} />
     </OutputContainer>;
 });
 

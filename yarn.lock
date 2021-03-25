@@ -7454,6 +7454,13 @@
   dependencies:
     "unist-util-visit-parents" "1.1.2"
 
+"mdast-util-definitions@^4.0.0":
+  "integrity" "sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ=="
+  "resolved" "https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "unist-util-visit" "^2.0.0"
+
 "mdast-util-find-and-replace@^1.1.0":
   "integrity" "sha512-9cKl33Y21lyckGzpSmEQnIDjEfeeWelN5s1kUW1LwdB0Fkuq2u+4GdqcGEygYxJE8GVqCl0741bYXHgamfWAZA=="
   "resolved" "https://registry.npmjs.org/mdast-util-find-and-replace/-/mdast-util-find-and-replace-1.1.1.tgz"
@@ -9906,6 +9913,14 @@
   dependencies:
     "mdast-util-gfm" "^0.1.0"
     "micromark-extension-gfm" "^0.3.0"
+
+"remark-inline-links@^5.0.0":
+  "integrity" "sha512-lyo2XPBo5qxNojm49uBvBYZQMoASBhf35Gdv9VHLqBzl4Dylv4WjZYdyLWtsCgaQcKkrIG2vzEolcAIU9l1ifA=="
+  "resolved" "https://registry.npmjs.org/remark-inline-links/-/remark-inline-links-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "mdast-util-definitions" "^4.0.0"
+    "unist-util-visit" "^2.0.0"
 
 "remark-parse@^9.0.0":
   "integrity" "sha512-geKatMwSzEXKHuzBNU1z676sGcDcFoChMK38TgdHJNAYfFtsfHDQG7MoJAjs6sgYMqyLduCYWDIWZIxiPeafEw=="
