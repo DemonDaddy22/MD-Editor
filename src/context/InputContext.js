@@ -12,6 +12,6 @@ const InputContextProvider = props => {
     return <InputContext.Provider value={{ markdownText, setMarkdownText }}>
         {props.children}
     </InputContext.Provider>;
-}
+};
 
 export default InputContextProvider;
