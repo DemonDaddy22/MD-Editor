@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/MD-Editor/static/css/main.c825df57.chunk.css",
-    "main.js": "/MD-Editor/static/js/main.447eab82.chunk.js",
-    "main.js.map": "/MD-Editor/static/js/main.447eab82.chunk.js.map",
+    "main.css": "/MD-Editor/static/css/main.38fdbd8b.chunk.css",
+    "main.js": "/MD-Editor/static/js/main.ccefc9a7.chunk.js",
+    "main.js.map": "/MD-Editor/static/js/main.ccefc9a7.chunk.js.map",
     "runtime-main.js": "/MD-Editor/static/js/runtime-main.f4f0ee14.js",
     "runtime-main.js.map": "/MD-Editor/static/js/runtime-main.f4f0ee14.js.map",
-    "static/js/2.6681beb6.chunk.js": "/MD-Editor/static/js/2.6681beb6.chunk.js",
-    "static/js/2.6681beb6.chunk.js.map": "/MD-Editor/static/js/2.6681beb6.chunk.js.map",
+    "static/js/2.31d31b56.chunk.js": "/MD-Editor/static/js/2.31d31b56.chunk.js",
+    "static/js/2.31d31b56.chunk.js.map": "/MD-Editor/static/js/2.31d31b56.chunk.js.map",
     "index.html": "/MD-Editor/index.html",
-    "static/css/main.c825df57.chunk.css.map": "/MD-Editor/static/css/main.c825df57.chunk.css.map",
-    "static/js/2.6681beb6.chunk.js.LICENSE.txt": "/MD-Editor/static/js/2.6681beb6.chunk.js.LICENSE.txt"
+    "static/css/main.38fdbd8b.chunk.css.map": "/MD-Editor/static/css/main.38fdbd8b.chunk.css.map",
+    "static/js/2.31d31b56.chunk.js.LICENSE.txt": "/MD-Editor/static/js/2.31d31b56.chunk.js.LICENSE.txt",
+    "static/media/icon.c86945f0.svg": "/MD-Editor/static/media/icon.c86945f0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f4f0ee14.js",
-    "static/js/2.6681beb6.chunk.js",
-    "static/css/main.c825df57.chunk.css",
-    "static/js/main.447eab82.chunk.js"
+    "static/js/2.31d31b56.chunk.js",
+    "static/css/main.38fdbd8b.chunk.css",
+    "static/js/main.ccefc9a7.chunk.js"
   ]
 }
