@@ -3,8 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import styled from 'styled-components';
 import { InputContext } from '../context/InputContext';
 import gfm from 'remark-gfm';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import inlineLinks from 'remark-inline-links';
 
 const OutputContainer = styled.div`
@@ -15,7 +13,7 @@ const OutputContainer = styled.div`
     color: #E9AB51;
     flex: 1;
     height: 400px;
-    min-width: 450px;
+    min-width: 300px;
     overflow-x: hidden;
     overflow-y: auto;
     padding: 0.25rem 0.75rem;
@@ -53,8 +51,21 @@ const OutputContainer = styled.div`
         width: 100%;
         height: auto;
     }
+
+    pre {
+        background-color: #2e4d5e;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+
+    code {
+        color: #33EE66;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
     
     @media (min-width: 768px) {
+        min-width: 400px;
         padding: 0.5rem 1rem;
     }
 
@@ -63,19 +74,12 @@ const OutputContainer = styled.div`
     }
 `;
 
-const renderers = {
-    code: ({ language, value }) => {
-        return <SyntaxHighlighter style={dark} language={language} children={value} showLineNumbers wrapLongLines
-            customStyle={{ backgroundColor: '#2e4d5e', textShadow: 'none', border: 'none' }} codeTagProps={{ style: { textShadow: 'none' } }} />;
-    }
-};
-
 const Output = React.memo(() => {
 
     const { markdownText } = useContext(InputContext);
 
     return <OutputContainer>
-        <ReactMarkdown plugins={[gfm, inlineLinks]} renderers={renderers} children={markdownText} />
+        <ReactMarkdown plugins={[gfm, inlineLinks]} children={markdownText} />
     </OutputContainer>;
 });
 

@@ -29,3 +29,9 @@ code {
 		overflow-x: hidden;
 	}
 }
+
+@media (min-width: 1024px) {
+	body {
+		overflow-y: hidden;
+	}
+}

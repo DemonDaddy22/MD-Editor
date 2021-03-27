@@ -10,7 +10,7 @@ const EditorContainer = styled.textarea`
     color: #E9AB51;
     flex: 1;
     height: 400px;
-    min-width: 450px;
+    min-width: 300px;
     outline: none;
     padding: 0.75rem;
     resize: none;
@@ -21,6 +21,7 @@ const EditorContainer = styled.textarea`
 
     @media (min-width: 768px) {
         font-size: 1.25rem;
+        min-width: 400px;
         padding: 1rem;
     }
 
